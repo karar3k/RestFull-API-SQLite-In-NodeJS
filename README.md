@@ -30,7 +30,7 @@ ENVIRONMENT=development
 - `http://localhost:3000/api/v1/auth/signin` POST: to get user list and check info `username , password`
 
 `Posts`
-- `http://localhost:3000/api/v1/posts` POST: to add new post record
+- `http://localhost:3000/api/v1/posts` POST: to add new post record `title , text`
 - `http://localhost:3000/api/v1/posts` GET: to get all posts record
 - `http://localhost:3000/api/v1/posts/id` GET: to get post record by id
 - `http://localhost:3000/api/v1/posts/id` PUT: to update post record by id 
