@@ -35,7 +35,7 @@ ENVIRONMENT=development
 - `http://localhost:3000/api/v1/posts/id` UPDATE: to update post record by id 
 - `http://localhost:3000/api/v1/posts/id` DELETE: to delete post record by id 
 
-## Description Same Point
+## Description
 - Any error path redirect to `Not Fount API`
 - `username & password ` not allow empty in `signup or signin`
 - `username & password ` min char is `5` , max char is `10`
