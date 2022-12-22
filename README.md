@@ -44,6 +44,8 @@ ENVIRONMENT=development
 - check User already exists before `signup` `check User Duplicate`
 - if deleted file database it will by generated if not exist at start app `npm start`
 - check post input is valid to make new record post `title & text`
+- add auth login register token_expire
+- add CRED operation with sqlite   
 
 
 
