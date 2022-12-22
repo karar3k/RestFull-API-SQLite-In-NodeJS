@@ -1,4 +1,4 @@
-# - RestFull API & SQLite In NodeJS
+# - RESTful API & SQLite In NodeJS
 ## Getting started
 - Fork the repo.
 - Clone the forked repo into your machine.
@@ -9,11 +9,11 @@
 ## Environment Variables file.
 ```
 URL="/api/v1"
-APP_PORT=3000
-DATABASE=dev
+APP_PORT=3000                                   
+DATABASE=dev                              # name of database sqlite
 JWT_SECRET_KEY="your_secret_key_here"
-TOKEN_EXPIRATION=60*60*3
-ENVIRONMENT=development
+TOKEN_EXPIRATION=10800                    # token with 3 hour of expiration (60*60*3)
+ENVIRONMENT=development                    
 ```
 
 ## Prerequisites
@@ -35,8 +35,11 @@ ENVIRONMENT=development
 - `http://localhost:3000/api/v1/posts/id` UPDATE: to update post record by id 
 - `http://localhost:3000/api/v1/posts/id` DELETE: to delete post record by id 
 
-## Description
+## Details Of The Error Handling
 - Any error path redirect to `Not Fount API`
-- `username & password ` not allow empty in `signup or signin`
-- `username & password ` min char is `5` , max char is `10`
+- `username & password ` not allow empty input in `signup or signin`
+- `username & password ` min char is `5` , max char is `8`
 - Any operation in `posts` need to `authentication`
+- check User already exists before `signup` `check User Duplicate`
+
+

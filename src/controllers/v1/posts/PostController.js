@@ -18,6 +18,11 @@ const getAllPosts = async (req, res)=>{
 }
 
 const getPostByID = async (req, res)=>{
+    let errors = validationResult(req).array();
+    if(errors && errors.length>0)
+    {
+        return res.status(400).json(error(400,errors))
+    }
     try {
         const postId = req.params.id;
         const post = await Post.findOne({where:{id:postId}})
@@ -33,6 +38,11 @@ const getPostByID = async (req, res)=>{
 }
 
 const createPost = async (req, res)=>{
+    let errors = validationResult(req).array();
+    if(errors && errors.length>0)
+    {
+        return res.status(400).json(error(400,errors))
+    }
     try {
         const returnObject = await Post.create(req.body)
         // res.send('post is insert')
@@ -43,6 +53,11 @@ const createPost = async (req, res)=>{
 }
 
 const updatePostByID = async (req, res)=>{
+    let errors = validationResult(req).array();
+    if(errors && errors.length>0)
+    {
+        return res.status(400).json(error(400,errors))
+    }
     try {
         const postId = req.params.id;
         const post = await Post.findOne({where:{id:postId}})
@@ -62,6 +77,11 @@ const updatePostByID = async (req, res)=>{
 }
 
 const deletePostByID = async (req, res)=>{
+    let errors = validationResult(req).array();
+    if(errors && errors.length>0)
+    {
+        return res.status(400).json(error(400,errors))
+    }
     try {
         const postId = req.params.id;
         const post = await Post.destroy({where:{id:postId}})

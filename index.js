@@ -45,7 +45,7 @@ app.get('/', function (req, res) {
 
 // call routers
 app.use(`${URL}/auth`, authRouter);
-app.use(`${URL}/posts`,[verifyToken], postRouter);
+app.use(`${URL}/posts`, [verifyToken], postRouter);
 app.use(`${URL}/*`, notFoundRouter);
 app.use('*', notFoundRouter);
 

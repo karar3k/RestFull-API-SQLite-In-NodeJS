@@ -3,11 +3,12 @@ const router = express.Router()
 const {signup , signin} = require('../../controllers/v1/auth/AuthController')
 const {notFound} = require('../../controllers/v1/notFound/NotFoundController')
 const {check, body} = require('express-validator')
+const {checkUserDuplicate} = require('../../middlewares/verifySignup')
 
 // router.post('/signup', signup);
 // router.post('/signin', signin);
-
-router.post('/signup', 
+// app.use(`${URL}/auth`, [checkUserDuplicate], authRouter);
+router.post('/signup', [checkUserDuplicate],
                 check('username').not().isEmpty().withMessage('username is required'), 
                 check('password').not().isEmpty().withMessage('password is required'),
                 body('username').isLength({min:5}).withMessage('username is small the min is 5')
@@ -21,7 +22,7 @@ router.post('/signin',
                 check('password').not().isEmpty().withMessage('password is required')
             ,signin)
 
-
+router.all('/*', notFound);
 router.all('*', notFound);
 
 module.exports = router;
