@@ -20,6 +20,7 @@ ENVIRONMENT=development
 - Postman to test Rest API, you can find API collection.json from here (https://drive.google.com/drive/folders/1eSwID1C7sorQ6cWsaPDqxVUW7Rwv2UbO?usp=share_link).
 
 ## Endpoints
+`Test`
 - `http://localhost:3000/` URL: use for test in browser
 
 - Use Postman For Test
