@@ -41,7 +41,7 @@ ENVIRONMENT=development
 - `username & password ` min char is `5` , max char is `8`
 - Any operation in `posts` need to `authentication`
 - check User already exists before `signup` `check User Duplicate`
-- if deleted file database it will by generated at start app `npm start`
+- if deleted file database it will by generated if not exist at start app `npm start`
 - check post input is valid to make new record post `title & text`
 
 
