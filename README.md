@@ -36,10 +36,13 @@ ENVIRONMENT=development
 - `http://localhost:3000/api/v1/posts/id` DELETE: to delete post record by id 
 
 ## Details Of The Error Handling
-- Any error path redirect to `Not Fount API`
+- Any error path redirect to `Not Fount API` such id or string
 - `username & password ` not allow empty input in `signup or signin`
 - `username & password ` min char is `5` , max char is `8`
 - Any operation in `posts` need to `authentication`
 - check User already exists before `signup` `check User Duplicate`
+- if deleted file database it will by generated at start app `npm start`
+- check post input is valid to make new record post
+
 
 
